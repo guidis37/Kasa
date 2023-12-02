@@ -1,0 +1,22 @@
+.card {
+    background-color: rgb(213, 211, 211);
+    min-height: 50vw;
+    border-radius: 2rem;
+    max-width: 92%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: space-between;
+
+}
+
+@media screen and (width <= 768px) {
+    .card {
+        justify-content: center;
+        background-color: white;
+        padding: 0;
+    }
+    
+}
