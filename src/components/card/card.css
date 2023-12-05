@@ -1,7 +1,7 @@
 .card {
-    background-color: rgb(213, 211, 211);
+    background-color: #f6f6f6;
     min-height: 50vw;
-    border-radius: 2rem;
+    border-radius: 25px;
     max-width: 92%;
     margin: auto;
     display: flex;
