@@ -2,7 +2,7 @@
     background-color: #f6f6f6;
     min-height: 50vw;
     border-radius: 25px;
-    max-width: 92%;
+    width: 90%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -17,6 +17,7 @@
         justify-content: center;
         background-color: white;
         padding: 0;
+        width: 94%;
     }
     
 }

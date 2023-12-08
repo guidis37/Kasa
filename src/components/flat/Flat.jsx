@@ -1,12 +1,13 @@
 import { NavLink } from "react-router-dom";
-import "./flat.css"
+import "./flat.scss"
 
-function Flat(){
-    return <div className="flat">
-        <NavLink to="/accomodation" style={{ textDecoration: 'none' }}>
-        <div className="titleflat">Titre de la location</div>
+function Flat({id, title, cover}){
+    return  (
+        <NavLink to="/accomodation/{id}" className="flat">
+        <img src={cover} alt={title} />
+			<h3>{title}</h3>
         </NavLink>
-    </div>
+    )
 }
 
 export default Flat;
