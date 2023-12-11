@@ -1,0 +1,29 @@
+.collapse {
+    margin-bottom: 1rem;
+    p {
+        margin-block: 0;
+    }
+    .descriptiontitle {
+    background-color: #ff6060;
+    color: white;
+    padding: 0.2em 1em;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    i {
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+    }
+    .descriptiontext {
+        background-color: #f6f6f6;
+        color: #ff6060;
+        padding: 1rem;
+        border-radius: 10px;
+        position: relative;
+        top: -0.3rem;
+        z-index: -1;
+
+    }
+}

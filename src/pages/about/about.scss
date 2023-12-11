@@ -1,0 +1,13 @@
+.aboutcontainer {
+    padding-inline: 80px;
+    @media screen and (width <= 768px) {
+        padding-inline: 0;
+}
+}
+
+.bannercontainer {
+    padding-inline: 50px;
+    @media screen and (width <= 768px) {
+        padding-inline: 0;
+}
+}

@@ -1,0 +1,101 @@
+.accomodation {
+    padding: 50px;
+    color: #ff6060;
+    div:first-child {
+        margin-bottom: 1rem;
+    }
+    h1 {
+        font-weight: 500;
+        line-height: 51.34px;
+        font-size: 36px;
+        margin-block: 0px;
+    }
+    h2 {
+        font-weight: 500;
+        line-height: 25.67px;
+        font-size: 18px;
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+    h3 {
+        margin-block: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    .flatheader {
+        display: flex;
+        gap: 1rem;
+        @media screen and (width <= 768px) {
+            flex-direction: column;
+            }    
+        }
+            
+        
+        .accomodationtitle {
+            flex-grow: 1;
+        }
+        .flatowner {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            @media screen and (width <= 768px) {
+                flex-direction: row;
+        }
+        }
+        .flatownerbadge {
+            display: flex;
+            gap: 0.5rem;
+            @media screen and (width <= 768px) {
+                order: 1;
+        }
+        }
+        .badge {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: grey;
+        }
+
+        .accomodationstars {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.2rem;
+            * {
+                font-size: 2rem;
+            }
+            .on {
+                color: #ff6060;
+            }
+            .off {
+                color: grey;
+            }
+        }
+    
+    & .tags {
+        display: grid;
+        font-size: 11px;
+        grid-template-columns: repeat(auto-fit, minmax(70px, 90px));
+        gap: 1rem;
+        span {
+        background-color: #ff6060;
+        color: white;
+        padding: 0.3em 0.5rem;
+        border-radius: 10px;
+        text-align: center;
+        }
+
+    }
+    .collapsecontainer {
+        display: flex;
+        gap: 4rem;
+        @media screen and (width <= 768px) {
+            flex-direction: column;
+            gap: 1rem;
+    }
+    }
+}
