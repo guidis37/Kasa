@@ -1,6 +1,8 @@
+@use "../../scss/variables.scss" as *;
+
 .accomodation {
     padding: 50px;
-    color: #ff6060;
+    color: $color-primary;
     div:first-child {
         margin-bottom: 1rem;
     }
@@ -69,10 +71,10 @@
                 font-size: 2rem;
             }
             .on {
-                color: #ff6060;
+                color: $color-primary;
             }
             .off {
-                color: grey;
+                color: $color-tertiary;
             }
         }
     
@@ -82,8 +84,8 @@
         grid-template-columns: repeat(auto-fit, minmax(70px, 90px));
         gap: 1rem;
         span {
-        background-color: #ff6060;
-        color: white;
+        background-color: $color-primary;
+        color: $color-secondary;
         padding: 0.3em 0.5rem;
         border-radius: 10px;
         text-align: center;

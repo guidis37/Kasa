@@ -1,11 +1,11 @@
 import { NavLink } from "react-router-dom";
 import "./flat.scss"
 
-function Flat({id, title, cover}){
+function Flat(props){
     return  (
         <NavLink to="/accomodation/{id}" className="flat">
-        <img src={cover} alt={title} />
-			<h3>{title}</h3>
+        <img src={props.cover} alt={props.title} />
+			<h3>{props.title}</h3>
         </NavLink>
     )
 }

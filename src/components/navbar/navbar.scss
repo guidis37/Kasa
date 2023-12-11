@@ -1,33 +1,33 @@
+@use "../../scss/variables.scss" as *;
+
 .Navbar {
     margin-top: 25px;
     margin-bottom: 30px;
     display: flex;
     align-items: center;
-    color: #ff6060;
+    color: $color-primary;
     font-weight: 700;
     font-size: 24px;
     gap: 2rem;
+        .navbar__logo {
+            margin-right: auto;
+        }
+
     @media screen and (width <= 768px) {
         text-transform: uppercase;
         font-weight: 500;
         gap: 1rem;
         font-size: 12px;
 }
-}
-
-.Navbar a {
+    & a {
     text-decoration: none;
-    color: #ff6060;
+    color: $color-primary;
+        &.active, 
+        &:hover {
+            text-decoration: underline;
+        }
+
 }
 
-.Navbar a:hover {
-    text-decoration: underline;
-}
 
-.Navbar a.active {
-    text-decoration: underline;
-}
-
-.navbar__logo {
-    margin-right: auto;
 }

@@ -4,17 +4,17 @@ import "./about.scss"
 
 export default function About (){
     return (
-        <div>
+    <div>
         <div className="bannercontainer">
-        <Banner />
+            <Banner />
         </div>
         <div className="aboutcontainer">
-        <Collapse />
-        <Collapse />
-        <Collapse />
-        <Collapse />
+            <Collapse />
+            <Collapse />
+            <Collapse />
+            <Collapse />
         </div>
-        </div>
+    </div>
         
         
     )

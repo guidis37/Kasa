@@ -1,10 +1,22 @@
-import "./card.css"
+import "./card.scss"
 import Flat from "../flat/Flat"
-import Datas from "../../data/data"
+import { useEffect, useState } from "react"
+
 
 function Card() {
+    const [datas, setDatas] = useState([]);
+
+    useEffect(fetchData, [])
+
+    function fetchData() {
+        fetch("data.json")
+            .then((res) => res.json())
+            .then((res) => setDatas(res))
+            .catch(console.error)
+    }
+
     return <div className="card">
-     {Datas.map(data => {
+     {datas.map(data => {
                 return (
                     <Flat
                         key={data.id}

@@ -1,13 +1,15 @@
+@use "../../scss/variables.scss" as *;
+
 .banner {
     position: relative;
     background-image: url("../../assets/bannerimage.png");
     min-height: 140px;
     width: 100%;
     margin: auto;
-    border-radius: 2rem;
+    border-radius: 25px;
     display: grid;
     place-items: center;
-    color: white;
+    color: $color-secondary;
     background-position: center;
     background-size: cover;
     margin-bottom: 30px;

@@ -1,11 +1,13 @@
+@use "../../scss/variables.scss" as *;
+
 .collapse {
     margin-bottom: 1rem;
     p {
         margin-block: 0;
     }
     .descriptiontitle {
-    background-color: #ff6060;
-    color: white;
+    background-color: $color-primary;
+    color: $color-secondary;
     padding: 0.2em 1em;
     border-radius: 10px;
     display: flex;
@@ -17,8 +19,8 @@
     }
     }
     .descriptiontext {
-        background-color: #f6f6f6;
-        color: #ff6060;
+        background-color: $color-tertiary;
+        color: $color-primary;
         padding: 1rem;
         border-radius: 10px;
         position: relative;

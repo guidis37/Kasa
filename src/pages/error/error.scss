@@ -1,5 +1,7 @@
+@use "../../scss/variables.scss" as *;
+
 .errorpage {
-    color: #ff6060;
+    color: $color-primary;
     text-align: center;
     h1 {
         font-size: 288px;
@@ -15,7 +17,7 @@
         font-weight: 500;
     }
     a {
-        color: #ff6060;
+        color: $color-primary;
 
         }
     

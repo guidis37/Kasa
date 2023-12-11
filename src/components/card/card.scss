@@ -1,20 +1,23 @@
+@use "../../scss/variables.scss" as *;
+
 .card {
-    background-color: #f6f6f6;
+    background-color: $color-tertiary;
     min-height: 50vw;
-    border-radius: 25px;
+    border-radius: 30px;
     width: 100%;
+    padding-top: 40px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
 }
 
 @media screen and (width <= 768px) {
     .card {
         justify-content: center;
-        background-color: white;
+        background-color: $color-secondary;
         padding: 0;
 
     }
