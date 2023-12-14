@@ -3,11 +3,10 @@ import Collapse from "../../components/collapse/collapse"
 import Carousel from "../../components/carousel/carousel"
 import { useParams } from 'react-router-dom'; 
 
-export default function Accomodation (){
+export default function Accomodation() {
 
         let {id} = useParams();
-
-
+  
     fetch("/data.json")
     .then((res) => res.json())
     .then((flats) => {
@@ -21,7 +20,7 @@ export default function Accomodation (){
             return (
         
                 <div className="accomodation">
-                    <Carousel imageUrl={flat.cover}/>
+                    <Carousel pictures={flat.pictures}/>
                     <div className="flatheader">
                         <div className="accomodationtitle">
                             <h1>{flat.title}</h1>
