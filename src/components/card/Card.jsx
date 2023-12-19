@@ -9,7 +9,7 @@ function Card() {
     useEffect(fetchData, [])
 
     function fetchData() {
-        fetch("data.json")
+        fetch("/data.json")
             .then((res) => res.json())
             .then((res) => setDatas(res))
             .catch(console.error)

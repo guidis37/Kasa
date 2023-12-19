@@ -6,7 +6,9 @@ import { useParams } from 'react-router-dom';
 export default function Accomodation() {
 
         let {id} = useParams();
+
   
+
     fetch("/data.json")
     .then((res) => res.json())
     .then((flats) => {

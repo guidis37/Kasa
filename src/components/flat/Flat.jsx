@@ -6,7 +6,7 @@ function Flat(props){
     return  (
         <Link
          to={`/accomodation/${props.id}`}
-         
+
           className="flat">
         <img src={props.cover} alt={props.title} />
 			<h3>{props.title}</h3>
