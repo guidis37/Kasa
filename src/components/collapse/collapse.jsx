@@ -5,12 +5,6 @@ function Collapse(props)  {
 
     const [isOpen, setIsOpen] = useState(false)
 
-   /* const showContent = () => {
-        setIsOpen(!isOpen);
-    }
-    const contentClass = (isOpen ? "visible" : "hidden");
-    const chevronClass = (isOpen ? "fa chevron up" : "fa-chevron-down"); */
-
     return (
         <div className="collapse">
                     <p className="descriptiontitle" onClick={() => setIsOpen(!isOpen)}>

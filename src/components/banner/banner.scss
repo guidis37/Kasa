@@ -1,30 +1,4 @@
 @use "../../scss/variables.scss" as *;
-/*
-.banner {
-    position: relative;
-    background-image: url("../../assets/bannerimage.png");
-    min-height: 140px;
-    width: 100%;
-    margin: auto;
-    border-radius: 25px;
-    display: grid;
-    place-items: center;
-    color: $color-secondary;
-    background-position: center;
-    background-size: cover;
-    margin-bottom: 30px;
-}
-
-.banner::before {
-    position: absolute;
-    content: "";
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.6;
-
-} */
 
 .banner{
     position: relative;
@@ -37,8 +11,7 @@
     background-position: center;
     background-size: cover;
     height: 223px;
-    padding: 20px;
-    max-width: 95%;
+    max-width: 100%;
     margin: 43px auto;
     @media screen and (max-width: 768px){
         margin: 20px auto;
@@ -52,7 +25,7 @@
         align-items: center;
         border-radius: 25px;
         height: 223px;
-        max-width: 95%;
+        max-width: 100%;
         margin: 43px auto;
         background-image: url('../../assets/bannerabout.png');
         background-position: center;
