@@ -36,6 +36,7 @@
     .flatheader {
         display: flex;
         gap: 1rem;
+        margin-bottom: 20px;
         @media screen and (width <= 768px) {
             flex-direction: column;
             }    
@@ -86,7 +87,7 @@
     & .tags {
         display: grid;
         font-size: 11px;
-        grid-template-columns: repeat(auto-fit, minmax(70px, 90px));
+        grid-template-columns: repeat(auto-fit, minmax(80px, 100px));
         gap: 1rem;
         span {
         background-color: $color-primary;

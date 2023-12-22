@@ -2,69 +2,92 @@ import "./accomodation.scss"
 import Collapse from "../../components/collapse/collapse"
 import Carousel from "../../components/carousel/carousel"
 import { useParams } from 'react-router-dom'; 
+import React, { useState, useEffect} from "react";
+// import Error from "../error/Error";
 
 export default function Accomodation() {
 
-        let {id} = useParams();
+        const {id} = useParams();
+        const [flatData, setFlatData] = useState(null);
 
   
+useEffect(() => {
+
 
     fetch("/data.json")
     .then((res) => res.json())
     .then((flats) => {
         const flat = flats.find(flat => flat.id === id);
+        console.log(flat.host.name)
 
-        if (flat == null) return <div>Loading...</div>;
+        if(flat == null) {
 
-        const name = flat.host.name;
+        return <div>Loading...</div>;
+        }
+        else {setFlatData(flat)}
+        })
+    .catch(console.error)
+},[id])
+
+        const name = flatData.host.name;
         console.log(name)
         const [firstName, lastName] = name.split(" ");
+        console.log(flatData)
+      
             return (
         
                 <div className="accomodation">
-                    <Carousel pictures={flat.pictures}/>
-                    <div className="flatheader">
-                        <div className="accomodationtitle">
-                            <h1>{flat.title}</h1>
-                            <h2>{flat.location}</h2>
-                            <div className="tags">
-                            {flat.tags.map((tag) => (
-                                <span key={tag}>{tag}</span>
-                            )
-                            )}
-                            </div>
-                        </div>
-                        <div className="flatowner">
-                            <div className="flatownerbadge">
-                                <h3>
-                                    <span>{firstName}</span>
-                                    <span>{lastName}</span>
-                                 </h3>
-                                <div className="badge">
-                                <img src={flat.host.picture} alt="" />
+               {
+                flatData ? (
+                <>
+                    <Carousel pictures={flatData.pictures}/>
+                        <div className="flatheader">
+                            <div className="accomodationtitle">
+                                <h1>{flatData.title}</h1>
+                                <h2>{flatData.location}</h2>
+                                <div className="tags">
+                                {flatData.tags.map((tag) => (
+                                    <span key={tag}>{tag}</span>
+                                )
+                                )}
                                 </div>
                             </div>
-                            <div className="accomodationstars">
-                            {[1, 2, 3, 4, 5].map((num) => (
-                                <span key={num} className={flat.rating >= num ? "on" : "" }>★</span>
-                            ))}
+                        
+                            <div className="flatowner">
+                                <div className="flatownerbadge">
+                                    <h3>
+                                        <span>{firstName}</span>
+                                        <span>{lastName}</span> 
+                                    </h3>
+                                    <div className="badge">
+                                    <img src={flatData.host.picture} alt="" />
+                                    </div>
+                                </div>
+                                <div className="accomodationstars">
+                                {[1, 2, 3, 4, 5].map((num) => (
+                                    <span key={num} className={flatData.rating >= num ? "on" : "" }>★</span>
+                                ))}
+                                </div>
                             </div>
-                            </div>
-                    </div>
+                        </div>
+                        
                     <div className="collapsecontainer">
-                    <Collapse title="Description" content={flat.description} />
-                    <Collapse title="Equipements" content={flat.equipments.map((eq) => (
+                        <Collapse title="Description" content={flatData.description} />
+                        <Collapse title="Equipements" content={flatData.equipments.map((eq) => (
                             <li key={eq}>{eq}</li>
                     ))} />
                     </div>
-        
-                    
-        
-                </div>
+                           
+                </>
+                                    ) : (<div>...lOADING</div>)
+                                }
+                                    </div>
             )
 
-    })
-    .catch(console.error)
+    }
+/*
 
-}
+*/
+
+        
 

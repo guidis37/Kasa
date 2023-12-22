@@ -23,17 +23,18 @@
         &.previous {
             left: 0;
         }
-        .slidecounter {
-            position: absolute;
-            color: $color-secondary;
-            font-size: 1.5rem;
-            font-weight: 700;
-            width: 100%;
-            text-align: center;
-            bottom: 1rem;
 
-            
-        }
+    }
+    .slidecounter {
+        position: absolute;
+        color: $color-secondary;
+        font-size: 1.5rem;
+        font-weight: 700;
+        width: 100%;
+        text-align: center;
+        bottom: 1rem;
+
+        
     }
     .imagecontainer {
         height: 20rem;
@@ -43,8 +44,7 @@
         position: absolute;
         inset: 0;
         width: 100%;
-        height: 100ù;
-        height: 415px;
+        height: 100%;
         object-fit: cover;
         border-radius: 25px;
         opacity: 0;

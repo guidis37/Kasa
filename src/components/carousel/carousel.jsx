@@ -37,7 +37,7 @@ function Carousel(props) {
             {currentPicture + 1} / {pictures.length}
             </span>
             <button className="btn next" onClick={moveToNext}>
-                <i className="fas fa-chevron-next"></i>
+                <i className="fas fa-chevron-right"></i>
             </button>
     </div>
     )
