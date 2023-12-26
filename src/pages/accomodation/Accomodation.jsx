@@ -1,9 +1,9 @@
 import "./accomodation.scss"
 import Collapse from "../../components/collapse/collapse"
-import Carousel from "../../components/carousel/carousel"
+import Carrousel from "../../components/carrousel/carrousel"
 import { useParams } from 'react-router-dom'; 
 import React, { useState, useEffect} from "react";
-// import Error from "../error/Error";
+import Error from "../error/Error";
 
 export default function Accomodation() {
 
@@ -20,6 +20,7 @@ useEffect(() => {
         const flat = flats.find(flat => flat.id === id);
         console.log(flat.host.name)
 
+
         if(flat == null) {
 
         return <div>Loading...</div>;
@@ -29,18 +30,16 @@ useEffect(() => {
     .catch(console.error)
 },[id])
 
-        const name = flatData.host.name;
-        console.log(name)
-        const [firstName, lastName] = name.split(" ");
-        console.log(flatData)
-      
+
+
             return (
         
-                <div className="accomodation">
+               <>
                {
                 flatData ? (
                 <>
-                    <Carousel pictures={flatData.pictures}/>
+                <div className="accomodation">
+                    <Carrousel pictures={flatData.pictures}/>
                         <div className="flatheader">
                             <div className="accomodationtitle">
                                 <h1>{flatData.title}</h1>
@@ -56,8 +55,8 @@ useEffect(() => {
                             <div className="flatowner">
                                 <div className="flatownerbadge">
                                     <h3>
-                                        <span>{firstName}</span>
-                                        <span>{lastName}</span> 
+                                        <span>{flatData.host.name}</span>
+
                                     </h3>
                                     <div className="badge">
                                     <img src={flatData.host.picture} alt="" />
@@ -70,18 +69,17 @@ useEffect(() => {
                                 </div>
                             </div>
                         </div>
-                        
                     <div className="collapsecontainer">
                         <Collapse title="Description" content={flatData.description} />
                         <Collapse title="Equipements" content={flatData.equipments.map((eq) => (
                             <li key={eq}>{eq}</li>
                     ))} />
                     </div>
-                           
+                    </div>    
                 </>
-                                    ) : (<div>...lOADING</div>)
+                                    ) : (<Error />)
                                 }
-                                    </div>
+                           </>         
             )
 
     }

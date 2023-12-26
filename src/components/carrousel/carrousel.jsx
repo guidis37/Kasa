@@ -1,4 +1,4 @@
-import "./carousel.scss"
+import "./carrousel.scss"
 import React, { useState } from 'react';
 
 function Carousel(props) {
