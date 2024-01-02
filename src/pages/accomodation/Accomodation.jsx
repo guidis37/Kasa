@@ -18,7 +18,7 @@ useEffect(() => {
     .then((res) => res.json())
     .then((flats) => {
         const flat = flats.find(flat => flat.id === id);
-        console.log(flat.host.name)
+
 
 
         if(flat == null) {

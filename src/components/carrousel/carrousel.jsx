@@ -23,6 +23,7 @@ function Carousel(props) {
         }
             setCurrentPicture(currentPicture - 1);
     };
+           if (pictures.length > 1) {
     return (
         <div className="carouselcontainer">
         <div className="imagecontainer">  
@@ -30,6 +31,7 @@ function Carousel(props) {
                 <img key={pic} src={pic} alt="" className={getClassName(i)}></img>
              ))}
         </div>
+
             <button className="btn previous" onClick={moveToPrevious}>
                 <i className="fas fa-chevron-left"></i>
             </button>
@@ -41,6 +43,18 @@ function Carousel(props) {
             </button>
     </div>
     )
+        } else {
+            return (
+                <div className="carouselcontainer">
+                <div className="imagecontainer">  
+                     {pictures.map((pic, i) => (
+                        <img key={pic} src={pic} alt="" className={getClassName(i)}></img>
+                     ))}
+                </div>
+            </div>
+            )
+        }
+       
 }
 
 export default Carousel
