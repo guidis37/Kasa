@@ -2,13 +2,6 @@ import "./banner.scss"
 import { useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
-/* function Banner() {
-    return <div className="banner">
-                <h2>Chez vous, partout et ailleurs</h2>
-    </div>
-}
-
-export default Banner; */
 
 export default function Banner() {
 
